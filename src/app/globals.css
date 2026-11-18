@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme {
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe7fe;
+  --color-brand-200: #bfd3fe;
+  --color-brand-500: #3b6ef5;
+  --color-brand-600: #1f54e0;
+  --color-brand-700: #1a43b8;
+  --color-brand-900: #142a6b;
+  --color-ink: #16181d;
+  --color-muted: #5b616e;
+  --color-line: #e3e6ec;
+  --color-surface: #f6f7f9;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+/* Trạng thái focus rõ ràng cho bàn phím (tiêu chí tương phản & dễ dùng). */
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+/* Thành phần giao diện dùng chung (định nghĩa bằng @utility để dùng được với biến thể như sm:, hover:). */
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+}
+@utility btn-secondary {
+  @apply btn border border-line bg-white text-ink hover:bg-surface;
+}
+@utility btn-danger {
+  @apply btn border border-rose-200 bg-white text-rose-700 hover:bg-rose-50;
+}
+@utility card {
+  @apply rounded-xl border border-line bg-white;
+}
+@utility input {
+  @apply w-full rounded-lg border border-line bg-white px-3 py-2.5 text-sm text-ink placeholder:text-muted/70 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-100;
+}
+@utility label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
+@utility chip {
+  @apply inline-flex items-center rounded-full border border-line bg-white px-3 py-1.5 text-sm text-ink hover:border-brand-200 hover:bg-brand-50;
+}
+@utility chip-active {
+  @apply border-brand-600 bg-brand-600 text-white hover:border-brand-700 hover:bg-brand-700;
+}

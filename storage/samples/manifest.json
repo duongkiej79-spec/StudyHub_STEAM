@@ -1,0 +1,66 @@
+{
+  "samples/toan12-nguyen-ham-cong-thuc.pdf": {
+    "size": 50257,
+    "pages": 1
+  },
+  "samples/toan12-tich-phan-ly-thuyet.pdf": {
+    "size": 50082,
+    "pages": 1
+  },
+  "samples/toan12-on-tap-nguyen-ham-tich-phan.pdf": {
+    "size": 49043,
+    "pages": 1
+  },
+  "samples/toan12-don-dieu-cuc-tri.pdf": {
+    "size": 50147,
+    "pages": 1
+  },
+  "samples/toan10-menh-de-tap-hop.pdf": {
+    "size": 52226,
+    "pages": 1
+  },
+  "samples/toan10-ham-so-bac-hai.pdf": {
+    "size": 53584,
+    "pages": 1
+  },
+  "samples/toan11-pt-luong-giac.pdf": {
+    "size": 48802,
+    "pages": 1
+  },
+  "samples/ly10-bien-doi-deu.pdf": {
+    "size": 49264,
+    "pages": 1
+  },
+  "samples/ly11-dao-dong-dieu-hoa.pdf": {
+    "size": 50213,
+    "pages": 1
+  },
+  "samples/ly12-cau-truc-chat.pdf": {
+    "size": 45601,
+    "pages": 1
+  },
+  "samples/hoa10-cau-tao-nguyen-tu.pdf": {
+    "size": 51161,
+    "pages": 1
+  },
+  "samples/hoa11-ph-bai-tap.pdf": {
+    "size": 48431,
+    "pages": 1
+  },
+  "samples/anh11-cac-thi.pdf": {
+    "size": 51136,
+    "pages": 1
+  },
+  "samples/anh12-bi-dong.pdf": {
+    "size": 50623,
+    "pages": 1
+  },
+  "samples/van10-than-thoai.pdf": {
+    "size": 47502,
+    "pages": 1
+  },
+  "samples/van12-nlxh.pdf": {
+    "size": 48390,
+    "pages": 1
+  }
+}
