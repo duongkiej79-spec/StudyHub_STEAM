@@ -99,15 +99,6 @@ export default async function SearchPage({ searchParams }: PageProps<"/tim-kiem"
           </select>
         </div>
         <div>
-          <label htmlFor="f-bs" className="label">Bộ sách</label>
-          <select id="f-bs" name="bo-sach" defaultValue={series ?? ""} className="input">
-            <option value="">Tất cả</option>
-            {catalog.series.map((s) => (
-              <option key={s.id} value={s.id}>{s.name}</option>
-            ))}
-          </select>
-        </div>
-        <div>
           <label htmlFor="f-sort" className="label">Sắp xếp</label>
           <select id="f-sort" name="sap-xep" defaultValue={sortParam} className="input">
             <option value="phu-hop">Phù hợp nhất</option>

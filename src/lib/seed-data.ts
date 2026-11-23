@@ -37,18 +37,43 @@ const grades: Catalog["grades"] = [
   { id: 12, name: "Lớp 12", slug: "lop-12" },
 ];
 
+
 const subjects: Catalog["subjects"] = [
   { id: "toan", name: "Toán", order: 1 },
   { id: "ngu-van", name: "Ngữ văn", order: 2 },
   { id: "tieng-anh", name: "Tiếng Anh", order: 3 },
   { id: "vat-ly", name: "Vật lý", order: 4 },
   { id: "hoa-hoc", name: "Hóa học", order: 5 },
+  { id: "sinh-hoc", name: "Sinh học", order: 6 },
+  { id: "lich-su", name: "Lịch sử", order: 7 },
+  { id: "dia-li", name: "Địa lí", order: 8 },
+  { id: "tin-hoc", name: "Tin học", order: 9 },
+  { id: "cong-nghe", name: "Công nghệ", order: 10 },
+  {
+    id: "gdkt-pl",
+    name: "Giáo dục kinh tế và pháp luật",
+    order: 11,
+  },
+  {
+    id: "gdqp-an",
+    name: "Giáo dục quốc phòng và an ninh",
+    order: 12,
+  },
 ];
 
 const series: Catalog["series"] = [
-  { id: "ket-noi", name: "Kết nối tri thức với cuộc sống" },
-  { id: "chan-troi", name: "Chân trời sáng tạo" },
-  { id: "canh-dieu", name: "Cánh diều" },
+  {
+    id: "ket-noi",
+    name: "Kết nối tri thức với cuộc sống",
+  },
+  {
+    id: "chan-troi",
+    name: "Chân trời sáng tạo",
+  },
+  {
+    id: "canh-dieu",
+    name: "Cánh diều",
+  },
 ];
 
 type ChapterSeed = {
