@@ -1,18 +1,43 @@
+
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
+import { AiChatWidget } from "@/components/ai-chat-widget";
 import { getCurrentUser } from "@/lib/auth";
 
-export default async function SiteLayout({ children }: LayoutProps<"/">) {
+export default async function SiteLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const user = await getCurrentUser();
+
   return (
     <>
-      <a href="#noi-dung" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 btn-primary">
+      <a
+        href="#noi-dung"
+        className="sr-only focus:not-sr-only"
+      >
         Bỏ qua đến nội dung
       </a>
-      <SiteHeader user={user ? { displayName: user.displayName } : null} />
+
+      <SiteHeader
+        user={
+          user
+            ? {
+                displayName: user.displayName,
+                
+              }
+            : null
+        }
+      />
+
       <main id="noi-dung" className="flex-1">
         {children}
       </main>
+
       <SiteFooter />
+
+      {/* Chatbot StudyHub AI */}
+      <AiChatWidget />
     </>
   );
 }
