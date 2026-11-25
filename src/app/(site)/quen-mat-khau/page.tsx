@@ -1,4 +1,4 @@
-
+import { requestPasswordReset } from "./actions";
 import Link from "next/link";
 
 export default function ForgotPasswordPage() {
@@ -14,7 +14,7 @@ export default function ForgotPasswordPage() {
           hướng dẫn đặt lại mật khẩu.
         </p>
 
-        <form className="space-y-4">
+        <form action={requestPasswordReset} className="space-y-4">
           <input
             type="email"
             name="email"
