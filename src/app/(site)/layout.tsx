@@ -1,6 +1,5 @@
 
 import { SiteFooter, SiteHeader } from "@/components/site-chrome";
-import { AiChatWidget } from "@/components/ai-chat-widget";
 import { getCurrentUser } from "@/lib/auth";
 
 export default async function SiteLayout({
@@ -37,7 +36,7 @@ export default async function SiteLayout({
       <SiteFooter />
 
       {/* Chatbot StudyHub AI */}
-      <AiChatWidget />
+    
     </>
   );
 }
