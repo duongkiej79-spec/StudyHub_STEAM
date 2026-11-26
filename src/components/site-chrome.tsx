@@ -15,6 +15,7 @@ const NAV = [
   { href: "/thu-vien", label: "Thư viện", mobile: true },
   { href: "/tim-kiem", label: "Tìm kiếm", mobile: false }, // điện thoại: dùng ô tìm kiếm ở trang chủ
   { href: "/luyen-tap", label: "Luyện tập", mobile: true },
+  { href: "/hoc-ai", label: "✦ Học cùng AI", mobile: true },
 ];
 
 /** `user`: người đang đăng nhập (null = khách). Layout lấy sẵn và truyền vào. */
