@@ -228,9 +228,14 @@ export function StudyHubAiTools() {
                 );
               })}
               {!grade ? (
-                <button type="button" disabled={grading || quiz.questions.some((question) => answers[question.id] === undefined)} onClick={() => void submitQuiz()} className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white disabled:opacity-50">
-                  {grading ? "Đang chấm…" : "Nộp bài & chấm điểm"}
-                </button>
+               <button
+  type="button"
+  disabled={grading}
+  onClick={() => void submitQuiz()}
+  className="rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white disabled:opacity-50"
+>
+  {grading ? "Đang chấm…" : "Nộp bài & chấm điểm"}
+</button>
               ) : (
                 <div className="rounded-xl bg-blue-50 p-5 text-center">
                   <p className="text-sm text-gray-700">Kết quả</p>
