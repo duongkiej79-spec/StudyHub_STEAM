@@ -88,4 +88,5 @@ export async function POST(request: Request) {
       : 500;
 
   return apiError(errorMessage(error), status);
+  }
 }
