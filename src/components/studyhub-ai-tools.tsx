@@ -100,7 +100,7 @@ export function StudyHubAiTools() {
         if (pages.join("\n").length >= 18000) break;
       }
     } finally {
-      await pdf.destroy();
+         await pdf.cleanup();
     }
     const extracted = pages.join("\n").slice(0, 18000);
     if (extracted.trim().length < 300) {
