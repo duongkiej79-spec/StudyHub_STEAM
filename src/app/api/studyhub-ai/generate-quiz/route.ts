@@ -1,5 +1,11 @@
 import { randomUUID } from "node:crypto";
-import { apiError, errorMessage, generateGeminiText, getStudyHubIdentity } from "@/lib/studyhub-ai/common";
+import {
+  apiError,
+  errorMessage,
+  generateGeminiText,
+  getStudyHubIdentity,
+  GeminiServiceError,
+} from "@/lib/studyhub-ai/common";
 import { sealQuizKey } from "@/lib/studyhub-ai/quiz-token";
 
 export const runtime = "nodejs";
@@ -55,11 +61,31 @@ export async function POST(request: Request) {
       questions: questions.map(({ id, question, options }) => ({ id, question, options })),
       token, expiresInMinutes: 120,
     });
-  } catch (error) {
-    console.error("StudyHub AI quiz generation", error instanceof Error ? error.name : "unknown");
-    if (error instanceof Error && error.message === "Invalid AI question") {
-      return apiError("Một số đáp án do AI tạo chưa hợp lệ. Hãy thử tạo lại.", 502);
-    }
-    return apiError(errorMessage(error), 503);
+ } catch (error) {
+  console.error("StudyHub AI quiz generation", {
+    type: error instanceof Error ? error.name : "unknown",
+    geminiStatus:
+      error instanceof GeminiServiceError
+        ? error.status
+        : null,
+  });
+
+  if (
+    error instanceof Error &&
+    error.message === "Invalid AI question"
+  ) {
+    return apiError(
+      "Một số đáp án do AI tạo chưa hợp lệ. Hãy thử tạo lại.",
+      502
+    );
   }
+
+  const status =
+    error instanceof GeminiServiceError
+      ? ([429, 502, 503, 504].includes(error.status)
+          ? error.status
+          : 502)
+      : 500;
+
+  return apiError(errorMessage(error), status);
 }
