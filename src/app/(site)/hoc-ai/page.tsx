@@ -17,7 +17,7 @@ export default function HocAiPage() {
         </p>
 
         <h1 className="mt-2 text-3xl font-bold text-ink">
-          Trợ lý học tập và tạo đề từ PDF
+          Trợ lý học tập
         </h1>
 
         <p className="mt-2 text-sm text-muted">
